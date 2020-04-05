@@ -1,0 +1,13 @@
+*
+!/**/
+!*.*
+!Makefile
+
+.idea
+CmakeLists.txt
+cmake-build-debug
+*.in
+*.out
+*.exe
+distrib-*/*.h
+testing_tool.py
