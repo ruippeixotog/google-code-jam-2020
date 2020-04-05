@@ -1,27 +1,13 @@
-#include <algorithm>
 #include <cstdio>
-#include <cstring>
 #include <iostream>
-#include <map>
-#include <queue>
-#include <set>
 #include <string>
-#include <utility>
-#include <vector>
-
-#define MAXN 2000
 
 using namespace std;
-
-typedef long long ll;
-typedef long double ld;
-
-string s;
 
 int main() {
   int t; scanf("%d\n", &t);
   for(int tc = 1; tc <= t; tc++) {
-    cin >> s;
+    string s; cin >> s;
 
     string s2;
     int depth = 0;

@@ -1,8 +1,5 @@
+#include <algorithm>
 #include <cstdio>
-#include <iostream>
-#include <set>
-#include <string>
-#include <vector>
 
 #define MAXB 100
 
@@ -12,28 +9,24 @@ int b;
 bool arr[MAXB];
 
 int ask(int p) {
-//  cerr << "Ask " << (p + 1) << endl;
   printf("%d\n", p + 1);
   fflush(stdout);
   char ans[2]; scanf("%s", ans);
   if(ans[0] == 'N') {
-    cerr << "Error" << endl;
     exit(0);
   }
   return ans[0] == '1';
 }
 
 void answer() {
-  string res;
+  char res[MAXB];
   for(int i = 0; i < b; i++) {
-    res.push_back(arr[i] ? '1' : '0');
+    res[i] = arr[i] ? '1' : '0';
   }
-  // cerr << "Answer " << res << endl;
-  printf("%s\n", res.c_str());
+  printf("%s\n", res);
   fflush(stdout);
   char ans[2]; scanf("%s", ans);
   if(ans[0] == 'N') {
-    cerr << "Error" << endl;
     exit(0);
   }
 }
@@ -68,7 +61,6 @@ void align(int st, int end) {
 }
 
 void fillPhase() {
-  // cerr << "Fill phase" << endl;
   for(int i = 0; i < b / 2; i++) {
     arr[i] = ask(i);
     arr[b - i - 1] = ask(b - i - 1);
@@ -78,7 +70,6 @@ void fillPhase() {
 void alignPhase() {
   int blockSize = 5;
   while(blockSize < b / 2) {
-    // cerr << "Align phase, blockSize = " << blockSize << endl;
     for(int i = 0; i < b / 2; i += blockSize) {
       align(i, i + blockSize);
     }
