@@ -1,88 +1,79 @@
-#include <algorithm>
 #include <cstdio>
 #include <cmath>
-#include <cstring>
+#include <functional>
 #include <iostream>
-#include <map>
-#include <queue>
-#include <set>
 #include <string>
 #include <utility>
 #include <vector>
 
-#define MAXN 2000
+#define MAXN 1000000000
 #define INF 0x3f3f3f3f
 
 using namespace std;
 
 typedef long long ll;
-typedef long double ld;
 
-ll a, b;
+vector<pair<int, int>> initialCandidates = {
+  {0, 0},
+  {-MAXN / 2, -MAXN / 2}, {-MAXN / 2, MAXN / 2},
+  {MAXN / 2, -MAXN / 2}, {MAXN / 2, MAXN / 2}
+};
 
 string ask(ll x, ll y) {
-//  cerr << "Q: " << x << " " << y << endl;
-  //printf("%lld %lld\n", x - 1000000000LL, y - 1000000000LL);
-  printf("%lld %lld\n", x - 1000000000LL, y - 1000000000LL);
+  printf("%lld %lld\n", x, y);
   fflush(stdout);
   string ans; cin >> ans;
-  cerr << "A: " << ans << endl;
   if(ans == "WRONG") {
     exit(0);
   }
   return ans;
 }
 
-ll distSq(ll x0, ll y0, ll x1, ll y1) {
-  return (x1 - x0) * (x1 - x0) + (y1 - y0) * (y1 * y0);
+ll findAxisCenter(ll initial, const function<string(ll)>& askFunc) {
+  ll lowerMinX = -MAXN, upperMinX = initial;
+  while(lowerMinX < upperMinX) {
+    ll midMinX = floor((lowerMinX + upperMinX) / 2.0);
+    string ans = askFunc(midMinX);
+
+    if(ans == "CENTER") { return INF; }
+    else if(ans == "HIT") { upperMinX = midMinX; }
+    else { lowerMinX = midMinX + 1; }
+  }
+  ll lowerMaxX = initial, upperMaxX = MAXN;
+  while(lowerMaxX < upperMaxX) {
+    ll midMaxX = ceil((lowerMaxX + upperMaxX + 1) / 2.0);
+    string ans = askFunc(midMaxX);
+
+    if(ans == "CENTER") { return INF; }
+    else if(ans == "HIT") { lowerMaxX = midMaxX; }
+    else { upperMaxX = midMaxX - 1; }
+  }
+  return (lowerMinX + lowerMaxX) / 2;
 }
 
 void go() {
-  ll margin = -(a - 1000000000LL);
-  ll diagRadius = sqrt(2.0) / 2.0 * a;
-
-  ll minDiag = 1000000000LL - margin;
-  ll maxDiag = 1000000000LL + margin;
-
-  while(minDiag + 1 < maxDiag) {
-    ll mid = (minDiag + maxDiag) / 2;
-
-    string ans = ask(mid - diagRadius, mid - diagRadius);
+  pair<ll, ll> initialHit = {0, 0};
+  for(auto c : initialCandidates) {
+    string ans = ask(c.first, c.second);
     if(ans == "CENTER") return;
-    if(ans == "HIT") {
-      maxDiag = mid;
-    } else {
-      minDiag = mid + 1;
-    }
+    if(ans == "HIT") { initialHit = c; break; }
   }
 
-  cerr << " bs finished " << minDiag << " " << maxDiag << endl;
+  ll x = findAxisCenter(initialHit.first, [&initialHit](ll guess) {
+    return ask(guess, initialHit.second);
+  });
+  if(x == INF) return;
+  ll y = findAxisCenter(initialHit.second, [&initialHit](ll guess) {
+    return ask(initialHit.first, guess);
+  });
+  if(y == INF) return;
 
-  for(int i = -50; i <= 50; i++) {
-    for(int j = -50; j <= 50; j++) {
-      if(
-        distSq(1000000000LL + i, 1000000000LL + j, maxDiag - diagRadius, maxDiag - diagRadius) >= diagRadius &&
-        distSq(1000000000LL + i, 1000000000LL + j, minDiag - diagRadius, minDiag - diagRadius) <= diagRadius) {
-
-        string ans = ask(1000000000LL + i, 1000000000LL + j);
-        if(ans == "CENTER") return;
-      }
-    }
-  }
-  exit(0);
+  ask(x, y);
 }
 
 int main() {
-  int t; scanf("%d %lld %lld", &t, &a, &b);
+  int t; scanf("%d %*d %*d", &t);
   for(int tc = 1; tc <= t; tc++) {
-//    bool found = false;
-//    for(int i = -5; i <= 5 && !found; i++) {
-//      for(int j = -5; j <= 5 && !found; j++) {
-//        if(ask(i, j) == "CENTER") {
-//          found = true;
-//        }
-//      }
-//    }
     go();
   }
   return 0;

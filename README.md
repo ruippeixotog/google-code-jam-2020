@@ -44,7 +44,7 @@ The following is the list of the problems solved. Each problem identifier is spe
 ### Round 1B
 
 * ✓ [A. Expogo][round1b1] (`expogo`)
-* ✗ [B. Blindfolded Bullseye][round1b2] (`blindfolded-bullseye`)
+* ✓ [B. Blindfolded Bullseye][round1b2] (`blindfolded-bullseye`)
 * ✗ [C. Join the Ranks][round1b3] (`join-the-ranks`)
 
 [1]: https://codingcompetitions.withgoogle.com/codejam
