@@ -41,6 +41,12 @@ The following is the list of the problems solved. Each problem identifier is spe
 * ✓ [B. Pascal Walk][round1a2] (`pascal-walk`)
 * ✓ [C. Square Dance][round1a3] (`square-dance`)
 
+### Round 1B
+
+* ✓ [A. Expogo][round1b1] (`expogo`)
+* ✗ [B. Blindfolded Bullseye][round1b2] (`blindfolded-bullseye`)
+* ✗ [C. Join the Ranks][round1b3] (`join-the-ranks`)
+
 [1]: https://codingcompetitions.withgoogle.com/codejam
 [2]: https://code.google.com/codejam/resources/quickstart-guide#dcj
 [qual1]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fd27/000000000020993c
@@ -50,3 +56,6 @@ The following is the list of the problems solved. Each problem identifier is spe
 [round1a1]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fd74/00000000002b3034
 [round1a2]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fd74/00000000002b1353
 [round1a3]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fd74/00000000002b1355
+[round1b1]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fef2/00000000002d5b62
+[round1b2]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fef2/00000000002d5b63
+[round1b3]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fef2/00000000002d5b64
