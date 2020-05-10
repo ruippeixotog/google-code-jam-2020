@@ -47,6 +47,12 @@ The following is the list of the problems solved. Each problem identifier is spe
 * ✓ [B. Blindfolded Bullseye][round1b2] (`blindfolded-bullseye`)
 * ✓ [C. Join the Ranks][round1b3] (`join-the-ranks`)
 
+### Round 1C
+
+* ✓ [A. Overexcited Fan][round1c1] (`overexcited-fan`)
+* ✓ [B. Overrandomized][round1c2] (`overrandomized`)
+* ✓ [C. Oversized Pancake Choppers][round1c3] (`oversized-pancake-choppers`)
+
 [1]: https://codingcompetitions.withgoogle.com/codejam
 [2]: https://code.google.com/codejam/resources/quickstart-guide#dcj
 [qual1]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fd27/000000000020993c
@@ -59,3 +65,6 @@ The following is the list of the problems solved. Each problem identifier is spe
 [round1b1]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fef2/00000000002d5b62
 [round1b2]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fef2/00000000002d5b63
 [round1b3]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fef2/00000000002d5b64
+[round1c1]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fef4/0000000000317409
+[round1c2]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fef4/00000000003179a1
+[round1c3]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fef4/00000000003172d1
