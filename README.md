@@ -53,6 +53,12 @@ The following is the list of the problems solved. Each problem identifier is spe
 * ✓ [B. Overrandomized][round1c2] (`overrandomized`)
 * ✓ [C. Oversized Pancake Choppers][round1c3] (`oversized-pancake-choppers`)
 
+### Round 2
+
+* ✓ [A. Incremental House of Pancakes][round21] (`incremental-house-of-pancakes`)
+* ✗ [B. Security Update][round22] (`security-update`)
+* ✗ [C. Wormhole in One][round23] (`wormhole-in-one`)
+
 [1]: https://codingcompetitions.withgoogle.com/codejam
 [2]: https://code.google.com/codejam/resources/quickstart-guide#dcj
 [qual1]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fd27/000000000020993c
@@ -68,3 +74,6 @@ The following is the list of the problems solved. Each problem identifier is spe
 [round1c1]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fef4/0000000000317409
 [round1c2]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fef4/00000000003179a1
 [round1c3]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fef4/00000000003172d1
+[round21]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019ffb9/00000000003384ea
+[round22]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019ffb9/000000000033871f
+[round23]: https://codingcompetitions.withgoogle.com/codejam/round/000000000019ffb9/00000000003386d0
