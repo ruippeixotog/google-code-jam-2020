@@ -3,11 +3,16 @@
 !*.*
 !Makefile
 
+# IDEs
 .idea
+.vscode
 CmakeLists.txt
 cmake-build-debug
+
+# Input/output files
 *.in
 *.out
-*.exe
-distrib-*/*.h
+
+# Interactive problem tools
+interactive_runner.py
 testing_tool.py
